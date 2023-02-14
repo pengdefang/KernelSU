@@ -1,5 +1,12 @@
 name: Build Kernel - Android 12
-on:
+on: 
+  workflow_dispatch:
+    inputs:
+      test:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+
   push:
     branches: ["main", "ci"]
     paths:
